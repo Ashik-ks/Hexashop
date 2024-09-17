@@ -217,7 +217,7 @@ async function viewdata(){
         if(message1[i].category === message.category){
              rows1 = rows1 + ` 
                  
-           <div class="container lh-lg pb-3 pt-3 shadow-none mb-5 bg-light rounded border " onclick="handleClick1('${id}')">
+           <div class="container lh-lg pb-3 pt-3 shadow-none mb-5 bg-light rounded border " onclick="handleClick2('${id}')">
                       <div id = "imageid"><img src ="${message1[i].image} " class = "datacontainerimg"></div>
                        <div class = "d-flex justify-content-between">
                        <div id = "titleid" class =" fs-4 fw-bold  d-inline mt-1">${message1[i].name}</div>
@@ -238,6 +238,10 @@ async function viewdata(){
     } catch (error) {
         console.log("error : ",error)
     }
+}
+function handleClick2(id) {
+    window.location.href = `singleview.html?id=${id}`;
+    console.log("id : ", id)
 }
 
 async function UpdateData(){
@@ -309,7 +313,6 @@ async function viewData1(){
                  <div id = "ratingid1" class="fst-normal fs-3">Rating : ${messages.rating}&#9734</div>
                  <div id = "ratingid1" class="fst-normal fs-3">Description : ${messages.description}</div>
                  <div class="ms-5 mt-2"><button onclick="EditClick('${id}')" class = "edit-button fs-5 fw-bold ps-3 pe-3">Edit</button></div>
-                     
                  </div>
        </div>
     `
