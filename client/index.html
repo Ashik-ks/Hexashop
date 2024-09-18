@@ -10,20 +10,93 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="Getdata()">
+<body onload="Getdata()" class="imagecontainer">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light pt-3">
-        <div class="container">
-            <img src="./images/hexashoplogo.png" alt="">
+        <div class="container  navone">
+            <div class="div">
+                <img src="./images/hexashoplogo.png" alt="">
+            </div>
+            <div class="scene">
+                <a class="navbar-brand hidden" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <img src="./images/icons8-line-width-16.png" alt="" width="30" height="23" class="navimg3line">
+                </a>
+            </div>
+
+
+
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                        <div class="col-12 d-flex">
+                            <a class="navbar-brand1" href="./index.html">
+                                <img src="./images/odin logo.svg" alt="" width="52" height="47">
+                                <a href="https://getbootstrap.com/docs/5.0/helpers/colored-links/"
+                                    class="link-dark first mt-3 text-decoration-none">
+                                    <h6>Hexashop</h6>
+                                </a>
+                            </a>
+
+                        </div>
+                    </h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                    height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                    aria-current="page" href="./index.html">
+                                    <h5>Home</h5>
+                                </a></span></div>
+                        <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                    height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                    aria-current="page" href="./allpaths.html">
+                                    <h5>Men's</h5>
+                                </a></span></div>
+                        <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                    height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                    aria-current="page" href="./about.html">
+                                    <h5>Women's</h5>
+                                </a></span></div>
+                        <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                    height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                    aria-current="page" href="./supportus.html">
+                                    <h5>Kid's</h5>
+                                </a></span></div>
+                        <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                    height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                    aria-current="page" href="./">
+                                    <h5>Page's</h5>
+                                </a></span></div>
+                        <div class="container-fluid border border-secondary"></div>
+                    </div>
+                    <div class="d-flex mt-3"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                aria-current="page" href="./getstarted.html">
+                                <h5>Feature's</h5>
+                            </a></span></div>
+                    <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                aria-current="page" href="./allpaths.html">
+                                <h5>Admin</h5>
+                            </a></span></div>
+                </div>
+            </div>
             <form class="d-flex">
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="./index.html">Home</a>
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="#">Men's</a>
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="#">Women's</a>
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="#">Kid's</a>
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="#">Page's</a>
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="#">Feature's</a>
-            
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="./update.html">Admin</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page"
+                    href="./index.html">Home</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page" href="#">Men's</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page" href="#">Women's</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page" href="#">Kid's</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page" href="#">Page's</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page" href="#">Feature's</a>
+
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page"
+                    href="./update.html">Admin</a>
         </div>
         </div>
     </nav>
@@ -117,7 +190,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-6 pe-3 lh-lg">
+            <div class="col-lg-6 pe-3 lh-lg ">
                 <div class="row fs-2 fw-bolder">Explore Our Products</div>
                 <div class="row fs-6 text-secondary mt-3  lefttext">You are allowed to use this HexaShop HTML CSS
                     template. You can feel free to modify or edit this layout. You can convert this template as any kind
@@ -130,10 +203,12 @@
                 <div class="row fs-6 text-secondary mt-3 lefttext ">If this template is beneficial for your website or
                     business, please kindly support us a little via PayPal. Please also tell your friends about our
                     great website. Thank you.</div>
-                <div class="row mt-3 mb-3"><button class="text-dark border border-dark discoverbtn">Discover
-                        More</button></div>
+                <div class="row mt-3 mb-3 discoverbtndiv"><button
+                        class="text-dark border border-dark discoverbtn">Discover
+                        More</button>
+                </div>
             </div>
-            <div class="col-3 fourdiv">
+            <div class="col-lg-3 fourdiv">
                 <div class="textdiv"><span class="fs-4 fw-bold">Leather Bags</span><span
                         class="text-secondary fs-6 fw-bold">Latest Collections</span></div>
                 <div><img src="./images/explore-image-01.jpg" alt=""></div>
@@ -154,37 +229,14 @@
         <div class="row fs-6 fst-italic text-secondary ps-3 mb-3">Details to details is what makes Hexashop different
             from the other themes.</div>
     </div>
-    <div class="container d-flex mt-5 image-container">
-        <div class="col">
-            <img src="./images/instagram-01.jpg" alt="" class="background-image">
-            <div class="overlay">
-                <img src="./images/white-logo.png" alt="" class="logo">
-            </div>
-        </div>
-        <div class="col">
-            <img src="./images/instagram-02.jpg" alt="" class="background-image">
-            <div class="overlay"><img src="../images/white-logo.png" alt="" class="logo">
-            </div>
-        </div>
-        <div class="col">
-            <img src="./images/instagram-03.jpg" alt="" class="background-image">
-            <div class="overlay"><img src="./images/white-logo.png" alt="" class="logo">
-            </div>
-        </div>
-        <div class="col">
-            <img src="./images/instagram-04.jpg" alt="" class="background-image">
-            <div class="overlay"><img src="./images/white-logo.png" alt="" class="logo">
-            </div>
-        </div>
-        <div class="col">
-            <img src="./images/instagram-05.jpg" alt="" class="background-image">
-            <div class="overlay"><img src="./images/white-logo.png" alt="" class="logo">
-            </div>
-        </div>
-        <div class="col">
-            <img src="./images/instagram-06.jpg" alt="" class="background-image">
-            <div class="overlay"><img src="./images/white-logo.png" alt="" class="logo">
-            </div>
+    <div class="container mt-5">
+        <div class="row " id="imagecontainer">
+            <div class="col siximages6"><img src="./images/instagram-01.jpg" alt=""></div>
+            <div class="col siximages6"><img src="./images/instagram-02.jpg" alt=""></div>
+            <div class="col siximages6"><img src="./images/instagram-03.jpg" alt=""></div>
+            <div class="col siximages6"><img src="./images/instagram-04.jpg" alt=""></div>
+            <div class="col siximages6"><img src="./images/instagram-05.jpg" alt=""></div>
+            <div class="col siximages6"><img src="./images/instagram-06.jpg" alt=""></div>
         </div>
     </div>
 
@@ -194,9 +246,10 @@
 
     <div class="container mt-5 mb-5 lh-lg">
         <div class="row mt-5 lh-lg">
-            <div class="col-8">
-                <div class="row fs-2 fw-bold">By Subscribing To Our Newsletter You Can Get 30% Off</div>
-                <div class="row fs-6 fst-italic fw-bold text-secondary mt-3">Details to details is what makes Hexashop
+            <div class="col-lg-8">
+                <div class="row fs-2 fw-bold text-center">By Subscribing To Our Newsletter You Can Get 30% Off</div>
+                <div class="row fs-6 fst-italic fw-bold text-secondary mt-3 text-center">Details to details is what
+                    makes Hexashop
                     different from the other themes.</div>
                 <div class="row lh-lg">
                     <div class="col-5 mb-4 mt-5"><input type="text" name="names" id="names"
@@ -207,7 +260,7 @@
                                 src="./images/icons8-telegram-30.png" alt="" class="telegram-logo"></button></div>
                 </div>
             </div>
-            <div class="col-2 lh-lg">
+            <div class="col-lg-2 lh-lg">
                 <div class="row fs-5 fw-bold text-dark">Store Location:</div>
                 <div class="row fs-6 text-secondary mb-4">Sunny Isles Beach, FL 33160, United States</div>
                 <div class="row fs-5 fw-bold text-dark">Phone:</div>
@@ -215,7 +268,7 @@
                 <div class="row fs-5 fw-bold text-dark">Office Location:</div>
                 <div class="row fs-6 text-secondary">North Miami Beach</div>
             </div>
-            <div class="col-2 lh-lg">
+            <div class="col-lg-2 lh-lg">
                 <div class="row fs-5 fw-bold text-dark">Work Hours:</div>
                 <div class="row  text-secondary mb-4">07:30 AM - 9:30 PM Daily</div>
                 <div class="row fs-5 fw-bold text-dark">Email:</div>
@@ -228,28 +281,28 @@
 
     <div class="container-fluid footer pt-4">
         <div class="container">
-            <div class="row">
-                <div class="col lh-lg">
+            <div class="row ">
+                <div class="col-lg lh-lg ">
                     <div class="row"><img src="./images/white-logo.png" alt="" class="footerlogo"></div>
                     <div class="row fs-6 text-secondary">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States
                     </div>
                     <div class="row fs-6 text-secondary">hexashop@company.com</div>
                     <div class="row fs-6 text-secondary">010-020-0340</div>
                 </div>
-                <div class="col lh-lg">
+                <div class="col-lg lh-lg">
                     <div class="row fs-5 fw-bold text-light">Shopping & Categories</div>
                     <div class="row fs-6 text-secondary">Men’s Shopping</div>
                     <div class="row fs-6 text-secondary">Women’s Shopping</div>
                     <div class="row fs-6 text-secondary">Kid’s Shopping</div>
                 </div>
-                <div class="col lh-lg">
+                <div class="col-lg lh-lg">
                     <div class="row fs-5 fw-bold text-light">Useful Links</div>
                     <div class="row fs-6 text-secondary">Homepage</div>
                     <div class="row fs-6 text-secondary">About Us</div>
                     <div class="row fs-6 text-secondary">Help</div>
                     <div class="row fs-6 text-secondary">Contact Us</div>
                 </div>
-                <div class="col lh-lg">
+                <div class="col-lg lh-lg">
                     <div class="row fs-5 fw-bold text-light">Help & Information</div>
                     <div class="row fs-6 text-secondary">Help</div>
                     <div class="row fs-6 text-secondary">FAQ's</div>

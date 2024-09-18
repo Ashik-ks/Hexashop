@@ -1,89 +1,110 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-.navtext{
+.navtext {
     font-size: 15px;
     font-weight: 700;
 }
-.navbtn{
+
+.navbtn {
     margin-top: 3px;
     background-color: white;
 }
-.navdiv{
- border-bottom: 1px dashed rgb(205, 211, 205);
- border-top: 1px solid rgb(205, 211, 205);
+
+.navdiv {
+    border-bottom: 1px dashed rgb(205, 211, 205);
+    border-top: 1px solid rgb(205, 211, 205);
 }
 
-.leftbanner{
-        background: url('./images/left-banner-image.jpg') center center no-repeat;
-        background-size: cover;
-        
+.navimg3line {
+    display: none;
 }
-.leftbtn{
+
+.leftbanner {
+    background: url('./images/left-banner-image.jpg') center center no-repeat;
+    background-size: cover;
+
+}
+
+.leftbtn {
     width: 183px;
     margin-left: 10px;
     color: white;
     font-size: 18px;
     font-weight: 500;
     background-color: transparent;
-    border: 1px solid ;
+    border: 1px solid;
 }
-.leftdivtext{
+
+.leftdivtext {
     margin-top: 300px;
     margin-left: 50px;
     color: white;
     font-size: 60px;
     font-weight: 600;
 }
-.rightbanner1{
+
+.rightbanner1 {
     background: url('./images/baner-right-image-01.jpg') center center no-repeat;
-        background-size: cover;
+    background-size: cover;
 }
-.rightbanner2{
+
+.rightbanner2 {
     background: url('./images/baner-right-image-03.jpg') center center no-repeat;
-        background-size: cover;
+    background-size: cover;
 }
-.rightbanner3{
+
+.rightbanner3 {
     background: url('./images/baner-right-image-02.jpg') center center no-repeat;
-        background-size: cover;
+    background-size: cover;
 }
-.rightbanner4{
+
+.rightbanner4 {
     background: url('./images/baner-right-image-04.jpg') center center no-repeat;
-        background-size: cover;
+    background-size: cover;
 }
-.rightbanner1text{
+
+.rightbanner1text {
     margin-top: 125px;
     color: white;
     font-size: 35px;
     font-weight: 600;
 }
-.rightbanner1text1{
+
+.rightbanner1text1 {
     color: white;
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 100px;
 }
-.nulldiv{
+
+.nulldiv {
     border-bottom: 2px dashed rgb(223, 203, 203);
 }
-.nulldivnav{
+
+.nulldivnav {
     border-bottom: 1px solid rgb(135, 131, 131);
 }
-.addproductbody{
+
+.addproductbody {
     background-image: url('./images/006c89b0e40820bcecef7ab6914dca27.jpg');
     background-size: cover;
 }
+
 .form-container {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Slightly transparent white background */
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     width: 100%;
     max-width: 600px;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(-20px); /* Slightly lifted */
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(-20px);
+    /* Slightly lifted */
     animation: slideIn 0.6s forwards;
 }
 
@@ -99,12 +120,17 @@ h1 {
 form label {
     display: block;
     margin-bottom: 5px;
-    color:  #2b2d2c;
+    color: #2b2d2c;
     font-weight: bold;
 }
 
 /* Input, Select, and Textarea styling */
-#name,#price,#description,#image,#category,#rating {
+#name,
+#price,
+#description,
+#image,
+#category,
+#rating {
     width: 100%;
     margin-bottom: 15px;
     padding: 12px;
@@ -114,7 +140,12 @@ form label {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-#name,#price,#description,#image,#category,#rating {
+#name,
+#price,
+#description,
+#image,
+#category,
+#rating {
     border-color: #004d40;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     outline: none;
@@ -137,71 +168,69 @@ form label {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-#datacontainer,#datacontainer1,#datacontainer2,#datacontainer3{
+
+#datacontainer,
+#datacontainer1,
+#datacontainer2,
+#datacontainer3 {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
     row-gap: 30px;
 }
-.datacontainerimgupdate{
+
+#imagecontainer {
+    display: grid;
+    grid-template-columns: repeat(6, 200px);
+}
+
+.datacontainerimgupdate {
     width: 70px;
     border-radius: 100%;
 }
-.datacontainerimgdelete{
+
+.datacontainerimgdelete {
     width: 35px;
 }
-.edit-button {
-    background-color: rgb(34, 29, 29);
-    color: #dbe3eb;             
-    border: none;             
-    border-radius: 7px;         
-    cursor: pointer;          
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
-  .edit-button:hover {
-    background-color: whitesmoke;
-    color: rgb(34, 29, 29);
-  }
-  .edit-button:focus {
-    outline: none;            
-    box-shadow: 0 0 0 2px rgba(186, 189, 192, 0.5);
-  }
-  .edit-button:active {
-    background-color: whitesmoke;
-    color: rgb(34, 29, 29);
-  }
-#single_datacontainer1{
+
+#single_datacontainer1 {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
     row-gap: 30px;
 }
-.datacontainerimg{
+
+.datacontainerimg {
     width: 100%;
 }
-.discoverbtn{
+
+.discoverbtn {
     width: 130px;
 }
-.lefttext{
+
+.lefttext {
     font-size: 18px;
     font-weight: 500;
 }
-.fourdiv{
+
+.fourdiv {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
-.textdiv{
-    background-color:rgb(248, 244, 244);
+
+.textdiv {
+    background-color: rgb(248, 244, 244);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .image-container {
     position: relative;
-    width: 100%; 
-} 
+    width: 100%;
+}
 
 .background-image {
     min-width: 100%;
@@ -222,13 +251,16 @@ form label {
 }
 
 .overlay .logo {
-    width: 50px; /* Adjust the size of the logo */
-    height: 50px; /* Adjust the size of the logo */
+    width: 50px;
+    /* Adjust the size of the logo */
+    height: 50px;
+    /* Adjust the size of the logo */
 }
 
 .image-container:hover .overlay {
     opacity: 1;
 }
+
 .logo-container {
     display: flex;
     justify-content: center;
@@ -238,7 +270,7 @@ form label {
 .telegram-logo {
     width: 35px;
     transition: transform 0.3s ease, filter 0.3s ease;
-  
+
 }
 
 .telegram-logo:hover {
@@ -247,15 +279,18 @@ form label {
     background-color: rgb(39, 119, 209);
     color: #ffffff;
 }
-.inputbox{
+
+.inputbox {
     width: 300px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.footer{
+
+.footer {
     background-color: #2b2d2c;
 }
-.footerlogo{
+
+.footerlogo {
     width: 230px;
 }
 
@@ -289,6 +324,7 @@ form label {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -299,6 +335,7 @@ form label {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -310,8 +347,121 @@ form label {
     .form-container {
         padding: 15px;
     }
-    
+
     form button {
         font-size: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    #names,
+    #email {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .fourdiv,
+    #datacontainer,
+    #datacontainer1,
+    #datacontainer2,
+    #datacontainer3,
+    #imagecontainer,
+    #single_datacontainer1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .single_datacontainerimg {
+        width: 90%;
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .single_datacontainer1 {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .textdiv {
+        width: 84%;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .datacontainerimgupdate {
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .datacontainertextupdate {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .siximages6 {
+        margin-left: 17%;
+        margin-right: 17%;
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .discoverbtndiv {
+        margin-left: 27%;
+        margin-right: 27%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .navimg3line {
+        display: block;
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .navone {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .scene {
+        justify-content: end;
+        margin-top: 20px;
+        margin-left: 25%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .formtext5 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .fourdiv {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .imagecontainer {
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }

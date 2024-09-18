@@ -1,34 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body onload="viewData1()">
-   
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light pt-3">
-        <div class="container">
-            <img src="./images/hexashoplogo.png" alt="">
+        <div class="container  navone">
+            <div class="div">
+                <img src="./images/hexashoplogo.png" alt="">
+            </div>
+            <div class="scene">
+                <a class="navbar-brand hidden" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <img src="./images/icons8-line-width-16.png" alt="" width="30" height="23" class="navimg3line">
+                </a>
+            </div>
+
+
+
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                        <div class="col-12 d-flex">
+                            <a class="navbar-brand1" href="./index.html">
+                                <img src="./images/odin logo.svg" alt="" width="52" height="47">
+                                <a href="https://getbootstrap.com/docs/5.0/helpers/colored-links/"
+                                    class="link-dark first mt-3 text-decoration-none">
+                                    <h6>Hexashop</h6>
+                                </a>
+                            </a>
+
+                        </div>
+                    </h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                    height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                    aria-current="page" href="./index.html">
+                                    <h5>Home</h5>
+                                </a></span></div>
+                        <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                    height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                    aria-current="page" href="./allpaths.html">
+                                    <h5>Men's</h5>
+                                </a></span></div>
+                        <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                    height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                    aria-current="page" href="./about.html">
+                                    <h5>Women's</h5>
+                                </a></span></div>
+                        <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                    height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                    aria-current="page" href="./supportus.html">
+                                    <h5>Kid's</h5>
+                                </a></span></div>
+                        <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                    height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                    aria-current="page" href="./">
+                                    <h5>Page's</h5>
+                                </a></span></div>
+                        <div class="container-fluid border border-secondary"></div>
+                    </div>
+                    <div class="d-flex mt-3"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                aria-current="page" href="./getstarted.html">
+                                <h5>Feature's</h5>
+                            </a></span></div>
+                    <div class="d-flex"><span class="mt-1"><img src="./images/icons8-home-24.png" alt="" width="42"
+                                height="30"></span><span class="mx-3"> <a class="nav-link active link-secondary mt-"
+                                aria-current="page" href="./allpaths.html">
+                                <h5>Admin</h5>
+                            </a></span></div>
+                </div>
+            </div>
             <form class="d-flex">
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="./index.html">Home</a>
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="#">Men's</a>
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="#">Women's</a>
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="#">Kid's</a>
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="#">Page's</a>
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="#">Feature's</a>
-                <a class="nav-link active text-dark navtext mt-2" aria-current="page" href="./update.html">Admin</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page"
+                    href="./index.html">Home</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page" href="#">Men's</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page" href="#">Women's</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page" href="#">Kid's</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page" href="#">Page's</a>
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page" href="#">Feature's</a>
+
+                <a class="nav-link active text-dark navtext mt-2 formtext5" aria-current="page"
+                    href="./update.html">Admin</a>
         </div>
         </div>
     </nav>
 
 
-   
-<div id="container"></div>
+
+    <div id="container"></div>
 
 
+
+
+    <div class="container-fluid footer pt-4">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg lh-lg ">
+                    <div class="row"><img src="./images/white-logo.png" alt="" class="footerlogo"></div>
+                    <div class="row fs-6 text-secondary">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States
+                    </div>
+                    <div class="row fs-6 text-secondary">hexashop@company.com</div>
+                    <div class="row fs-6 text-secondary">010-020-0340</div>
+                </div>
+                <div class="col-lg lh-lg">
+                    <div class="row fs-5 fw-bold text-light">Shopping & Categories</div>
+                    <div class="row fs-6 text-secondary">Men’s Shopping</div>
+                    <div class="row fs-6 text-secondary">Women’s Shopping</div>
+                    <div class="row fs-6 text-secondary">Kid’s Shopping</div>
+                </div>
+                <div class="col-lg lh-lg">
+                    <div class="row fs-5 fw-bold text-light">Useful Links</div>
+                    <div class="row fs-6 text-secondary">Homepage</div>
+                    <div class="row fs-6 text-secondary">About Us</div>
+                    <div class="row fs-6 text-secondary">Help</div>
+                    <div class="row fs-6 text-secondary">Contact Us</div>
+                </div>
+                <div class="col-lg lh-lg">
+                    <div class="row fs-5 fw-bold text-light">Help & Information</div>
+                    <div class="row fs-6 text-secondary">Help</div>
+                    <div class="row fs-6 text-secondary">FAQ's</div>
+                    <div class="row fs-6 text-secondary">Shipping</div>
+                    <div class="row fs-6 text-secondary">Tracking ID</div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="border border-bottom-secondary"></div>
+            </div>
+
+            <div class="row lh-lg mt-4">
+
+                <div class="text-center fs-6 text-secondary">Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved.
+                </div>
+                <div class="text-center fs-6 text-secondary">Design: TemplateMo</div>
+                <div class="text-center fs-6 text-secondary">Distributed By: ThemeWagon</div>
+                <div class="d-flex justify-content-center mt-2 mb-4 gap-3"><img src="./images/icons8-fb-50.png" alt=""
+                        width="30" height="24"><img src="./images/icons8-twitter-50.png" alt="" width="30" height="24">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 
 
 
@@ -39,4 +167,5 @@
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

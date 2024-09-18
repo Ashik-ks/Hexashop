@@ -1,39 +1,39 @@
 
-async function Getdata(){
-     let response = await fetch(`/submit`);
-     console.log("response : ",response);
+async function Getdata() {
+    let response = await fetch(`/submit`);
+    console.log("response : ", response);
 
-     let parsed_response = await response.json();
-        console.log("display : ", parsed_response);
+    let parsed_response = await response.json();
+    console.log("display : ", parsed_response);
 
-     let message = parsed_response.message;
-     console.log("message : ",message);
+    let message = parsed_response.message;
+    console.log("message : ", message);
 
 
-     let datacontainer = document.getElementById('datacontainer');
-     let datacontainer1 = document.getElementById('datacontainer1');
-     let datacontainer2 = document.getElementById('datacontainer2');
-     let datacontainer3 = document.getElementById('datacontainer3');
+    let datacontainer = document.getElementById('datacontainer');
+    let datacontainer1 = document.getElementById('datacontainer1');
+    let datacontainer2 = document.getElementById('datacontainer2');
+    let datacontainer3 = document.getElementById('datacontainer3');
 
-     let rows = ''
-     let rows1 = ''
-     let rows2 = ''
-     let rows3 = ''
+    let rows = ''
+    let rows1 = ''
+    let rows2 = ''
+    let rows3 = ''
 
-     let arr = ['']
-     let arr1 = ['']
-     let arr2 =['']
-     let arr3 = ['']
-     let arr4 = ["Women's clothing", "Men's clothing","Kid's Clothing"]
-     
+    let arr = ['']
+    let arr1 = ['']
+    let arr2 = ['']
+    let arr3 = ['']
+    let arr4 = ["Women's clothing", "Men's clothing", "Kid's Clothing"]
 
-  
 
-     for(i=0;i<message.length; i++){
+
+
+    for (i = 0; i < message.length; i++) {
         let id = message[i]._id
-        if(message[i].category === "Men's clothing"){
-            arr = 
-            rows = rows + ` 
+        if (message[i].category === "Men's clothing") {
+            arr =
+                rows = rows + ` 
                 
           <div class="container lh-lg pb-3 pt-3 shadow-none mb-5 bg-light rounded" onclick="handleClick('${id}')">
                      <div id = "imageid"><img src ="${message[i].image} " class = "datacontainerimg"></div>
@@ -45,9 +45,9 @@ async function Getdata(){
                      </div>
             `
         }
-        if(message[i].category === "Women's clothing"){
-            arr1 = 
-            rows1 = rows1 + ` 
+        if (message[i].category === "Women's clothing") {
+            arr1 =
+                rows1 = rows1 + ` 
                 
           <div class="container lh-lg pb-3 pt-3 shadow-none mb-5 bg-light rounded" onclick="handleClick('${id}')">
                      <div id = "imageid"><img src ="${message[i].image} " class = "datacontainerimg"></div>
@@ -59,9 +59,9 @@ async function Getdata(){
                      </div>
             `
         }
-        if(message[i].category === "Kid's Clothing"){
-            arr2 = 
-            rows2 = rows2 + ` 
+        if (message[i].category === "Kid's Clothing") {
+            arr2 =
+                rows2 = rows2 + ` 
                 
           <div class="container lh-lg pb-3 pt-3 shadow-none mb-5 bg-light rounded" onclick="handleClick('${id}')">
                      <div id = "imageid"><img src ="${message[i].image} " class = "datacontainerimg"></div>
@@ -73,19 +73,19 @@ async function Getdata(){
                      </div>
             `
         }
-       
-       
+
+
 
         datacontainer.innerHTML = rows;
         datacontainer1.innerHTML = rows1;
         datacontainer2.innerHTML = rows2;
-       
-        }
 
-        for (let i = 0; i < message.length; i++) {
-            let item = message[i];
-            if (!arr4.includes(item.category)) {
-                rows3 += `
+    }
+
+    for (let i = 0; i < message.length; i++) {
+        let item = message[i];
+        if (!arr4.includes(item.category)) {
+            rows3 += `
                     <div class="container lh-lg pb-3 pt-3 shadow-none mb-5 bg-light rounded" onclick="handleClick('${item._id}')">
                         <div id="imageid"><img src="${item.image}" class="datacontainerimg"></div>
                         <div class="d-flex justify-content-between">
@@ -94,36 +94,36 @@ async function Getdata(){
                         </div>
                     </div>
                 `;
-            }
         }
-            datacontainer3.innerHTML = rows3;
-        
-        
+    }
+    datacontainer3.innerHTML = rows3;
+
+
 }
 
-async function addData(event){
-     window.location.href = `index.html`
+async function addData(event) {
+    window.location.href = `index.html`
     event.preventDefault();
 
-    let name = document.getElementById('name').value ;
-    console.log("name : ",name);
+    let name = document.getElementById('name').value;
+    console.log("name : ", name);
 
-    let price = document.getElementById('price').value ;
-    console.log("price : ",price);
+    let price = document.getElementById('price').value;
+    console.log("price : ", price);
 
-    let category = document.getElementById('category').value ;
-    console.log("category : ",category);
+    let category = document.getElementById('category').value;
+    console.log("category : ", category);
 
-    let image = document.getElementById('image').value ;
-    console.log("image : ",image);
- 
-    let description = document.getElementById('description').value  ;
-    console.log("description : ",description);
+    let image = document.getElementById('image').value;
+    console.log("image : ", image);
 
-    let rating = document.getElementById('rating').value ;
-    console.log("rating : ",rating);
-    
-   
+    let description = document.getElementById('description').value;
+    console.log("description : ", description);
+
+    let rating = document.getElementById('rating').value;
+    console.log("rating : ", rating);
+
+
 
     let datas = {
         name,
@@ -162,7 +162,7 @@ function handleClick(id) {
     console.log("id : ", id)
 }
 
-async function viewdata(){
+async function viewdata() {
 
     let location = window.location;
     console.log("location", location);
@@ -179,14 +179,14 @@ async function viewdata(){
     try {
 
         let response = await fetch(`/product/${id}`);
-        console.log("response : ",response);
+        console.log("response : ", response);
 
         let parsed_response = await response.json();
-        console.log("parsed_ersponse : ",parsed_response)
+        console.log("parsed_ersponse : ", parsed_response)
 
         let message = parsed_response.message;
-        console.log("message : ",message);
-        console.log("message.category : ",message.category)
+        console.log("message : ", message);
+        console.log("message.category : ", message.category)
 
         let rows = `
         <div class="container  lh-lg  pb-3 pt-3 shadow p-3 mb-5 bg-body rounded mt-3 mt-5">
@@ -202,20 +202,20 @@ async function viewdata(){
         document.getElementById('single_datacontainer').innerHTML = rows;
 
         let response1 = await fetch(`/submit`);
-     console.log("response1 : ",response1);
+        console.log("response1 : ", response1);
 
-     let parsed_response1 = await response1.json();
+        let parsed_response1 = await response1.json();
         console.log("parsed_response1 : ", parsed_response1);
 
-     let message1 = parsed_response1.message;
-     console.log("message1 : ",message1);
-    //  console.log("message1.category : ",message1.category)
+        let message1 = parsed_response1.message;
+        console.log("message1 : ", message1);
+        //  console.log("message1.category : ",message1.category)
 
-    let rows1 = ''
-    let single_datacontainer1 = document.getElementById('single_datacontainer1');
-     for(i=0;i<message1.length; i++){
-        if(message1[i].category === message.category){
-             rows1 = rows1 + ` 
+        let rows1 = ''
+        let single_datacontainer1 = document.getElementById('single_datacontainer1');
+        for (i = 0; i < message1.length; i++) {
+            if (message1[i].category === message.category) {
+                rows1 = rows1 + ` 
                  
            <div class="container lh-lg pb-3 pt-3 shadow-none mb-5 bg-light rounded border " onclick="handleClick2('${id}')">
                       <div id = "imageid"><img src ="${message1[i].image} " class = "datacontainerimg"></div>
@@ -226,17 +226,17 @@ async function viewdata(){
                         
                       </div>
              `
-         }
-    
-         single_datacontainer1.innerHTML = rows1;
-     }
-     
+            }
+
+            single_datacontainer1.innerHTML = rows1;
+        }
+
 
 
 
 
     } catch (error) {
-        console.log("error : ",error)
+        console.log("error : ", error)
     }
 }
 function handleClick2(id) {
@@ -244,35 +244,35 @@ function handleClick2(id) {
     console.log("id : ", id)
 }
 
-async function UpdateData(){
+async function UpdateData() {
 
     let response = await fetch(`/submit`);
-console.log("response : ",response);
+    console.log("response : ", response);
 
-let parsed_response = await response.json();
-   console.log("display : ", parsed_response);
+    let parsed_response = await response.json();
+    console.log("display : ", parsed_response);
 
-let message = parsed_response.message;
-console.log("message : ",message);
+    let message = parsed_response.message;
+    console.log("message : ", message);
 
-let datacontainer =  document.getElementById('datacontainer_update');
-console.log("datacontainer : ",datacontainer);
+    let datacontainer = document.getElementById('datacontainer_update');
+    console.log("datacontainer : ", datacontainer);
 
-let rows = [''];
+    let rows = [''];
 
-for (i=0;i<message.length;i++){
-    let id = message[i]._id;
-    rows = rows + `
+    for (i = 0; i < message.length; i++) {
+        let id = message[i]._id;
+        rows = rows + `
     <div class="row-12 bg-secondary d-flex  pb-3 pt-3 shadow-none mb-5 bg-light rounded" onclick="handleClick1('${id}')">
             <div class="col-2" ><img src="${message[i].image} " class="datacontainerimgupdate"></div>
-            <div class="col-6  fs-4 fw-bold   mt-1 text-center text-secondary  pt-2">${message[i].name}</div>
-            <div class="col-2  fs-5 fw-bold  mt-2 text-center text-secondary pt-2">${message[i].category}&#9734</div>
+            <div class="col-6  fs-3 fw-bolder   mt-1 text-center text-secondary  pt-2 datacontainertextupdate">${message[i].name}</div>
+            <div class="col-2  fs-4 fw-bolder  mt-2 text-center text-secondary pt-2 datacontainertextupdate">${message[i].category}</div>
             <div class="col-2 mt-3 text-center "><img src="./images/icons8-delete-30.png" class="datacontainerimgdelete" onclick="DeleteClick('${id}')"></div>
        </div>
         
             `
-     datacontainer.innerHTML= rows;
-}
+        datacontainer.innerHTML = rows;
+    }
 }
 
 function handleClick1(id) {
@@ -280,7 +280,7 @@ function handleClick1(id) {
     console.log("id : ", id)
 }
 
-async function viewData1(){
+async function viewData1() {
 
     let location = window.location;
     console.log("location", location);
@@ -295,14 +295,14 @@ async function viewData1(){
     console.log("id ", id, typeof (id));
 
     let responses = await fetch(`/product/${id}`);
-    console.log("responses : ",responses);
+    console.log("responses : ", responses);
 
     let parsed_responses = await responses.json();
-    console.log("parsed_ersponses : ",parsed_responses)
+    console.log("parsed_ersponses : ", parsed_responses)
 
     let messages = parsed_responses.message;
-    console.log("messages : ",messages);
-  
+    console.log("messages : ", messages);
+
 
     let rows = `
     <div class="container  lh-lg  pb-3 pt-3 shadow p-3 mb-5 bg-body rounded mt-3 mt-5">
@@ -320,12 +320,12 @@ async function viewData1(){
 
 }
 
- function EditClick(id){
-        window.location.href = `editpage.html?id=${id}`;
+function EditClick(id) {
+    window.location.href = `editpage.html?id=${id}`;
 }
 
-    async function formdata() {
-        let params = new URLSearchParams(window.location.search);
+async function formdata() {
+    let params = new URLSearchParams(window.location.search);
     console.log("params", params);
 
     let id = params.get('id')
@@ -357,7 +357,7 @@ async function viewData1(){
     }
 }
 
-async function EditData(event){
+async function EditData(event) {
     event.preventDefault();
     let name = document.getElementById('name').value
     console.log("name", name)
@@ -376,7 +376,7 @@ async function EditData(event){
         description,
     }
 
-    
+
     let stringyfydata = JSON.stringify(datas1)
     console.log("stringyfydata", stringyfydata);
 
